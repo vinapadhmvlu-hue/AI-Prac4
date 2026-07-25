@@ -1,0 +1,20 @@
+Q.2 In a city:
+85% of taxis are Green.
+15% are Blue.
+A witness correctly identifies the taxi color 80% of the time.
+A witness claims the taxi involved in an accident was Blue. What is the probability that the taxi was actually Blue? 
+CODE
+P_Blue = 0.15
+
+P_Green = 0.85
+
+P_SaysBlue_Blue = 0.80
+
+P_SaysBlue_Green = 0.20
+
+P_Blue_SaysBlue = (P_SaysBlue_Blue * P_Blue) / (
+    (P_SaysBlue_Blue * P_Blue) + (P_SaysBlue_Green * P_Green)
+)
+
+print("Probability that taxi was actually Blue:")
+print(round(P_Blue_SaysBlue * 100, 2), "%")
