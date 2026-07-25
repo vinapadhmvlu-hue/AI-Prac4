@@ -1,0 +1,28 @@
+Q.3 Scholarship Selection
+In a college:
+30% of students apply for a scholarship.
+70% of students do not apply.
+80% of students who apply are selected.
+10% of students who do not apply are selected through a special quota.
+A randomly selected student is found to be selected.
+Find:
+Probability that the student applied for the scholarship.
+Probability that the student did not apply for the scholarship.
+Probability that a selected student had applied for the scholarship.
+
+CODE
+P_Apply = 0.30
+
+P_NotApply = 0.70
+
+P_Select_Apply = 0.80
+
+P_Select_NotApply = 0.10
+
+P_Select = (P_Select_Apply * P_Apply) + (P_Select_NotApply * P_NotApply)
+
+P_Apply_Select = (P_Select_Apply * P_Apply) / P_Select
+
+print("Probability that selected student applied for scholarship:")
+print(round(P_Apply_Select * 100, 2), "%")
+
